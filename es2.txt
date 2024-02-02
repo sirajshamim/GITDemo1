@@ -1,0 +1,90 @@
+#!/bin/bash
+
+echo "##### WELCOME TO QUIZ GAME #####"
+echo "Enter your name"
+read your_name
+echo "Q.1 In which course your are currently enrolled?"
+read cou
+if [ "${cou}" == "devops" ]
+then
+echo "Nice! Right answer"
+else
+echo "Your answer ($cou) is incorrect. Right answer is devops"
+res1="{$cou}"
+fi
+echo "Q.2 Which terminal/prompt are you in?"
+read ter
+if [ "${ter}" == "bash" ]
+then
+echo "Good! Right answer"
+else
+echo "Your answer (${er}) is incorrect. Right answer is bash"
+res2="{$ter}"
+fi
+echo "Q.3 There are two terminals in Windows? 1-DOS and 2-?"
+read pro
+if [ "${pro}" == "powershell" ]
+then
+echo "Great! Right answer"
+else
+echo "Your answer (${pro}) is incorrect. Right answer is powershell"
+res3="{$pro}"
+fi
+
+
+if [ "{$res1}" == devops ]
+then
+result1="10"
+fi
+if [ "{$res2}" == bash ]
+then
+result2="10"
+else
+result2="0"
+fi
+if [ "{$res3}" == powershell ]
+then
+result3="10"
+fi
+
+results= "${result1}" + "${result2}" + "${result3}"
+echo "$results"
+
+#!/bin/bash
+
+echo "##### WELCOME TO QUIZ GAME #####"
+echo "Enter your name"
+read your_name
+echo "Q.1 In which course your are currently enrolled?"
+read cou
+if [ "${cou}" == "devops" ]
+then
+res="10"
+echo "Nice! Right answer"
+else
+echo "Your answer ($cou) is incorrect. Right answer is devops"
+res1="0"
+fi
+echo "Q.2 Which terminal/prompt are you in?"
+read ter
+if [ "${ter}" == "bash" ]
+then
+res2="10"
+echo "Good! Right answer"
+else
+echo "Your answer (${er}) is incorrect. Right answer is bash"
+res2="0"
+fi
+echo "Q.3 There are two terminals in Windows? 1-DOS and 2-?"
+read pro
+if [ "${pro}" == "powershell" ]
+then
+res1="10"
+echo "Great! Right answer"
+else
+echo "Your answer (${pro}) is incorrect. Right answer is powershell"
+res3="0"
+fi
+
+results= "${result1} + ${result2} + ${result3}"
+echo "$results"
